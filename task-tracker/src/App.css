@@ -1,0 +1,146 @@
+.App {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Add Task Form */
+.add-task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.add-task-form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.add-task.form input:focus {
+  border-color: #4caf50;
+}
+
+.add-task-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-task-form button:hover {
+  background-color: #45a049;
+}
+
+/* Task Container */
+.tasks-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-height: 200px;
+  margin-bottom: 20px;
+}
+
+/* Task Item */
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item:hover {
+  background-color: #f9f9f9;
+}
+
+.task-item.completed .task-description {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-description {
+  flex: 1;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+/* Checkbox */
+.task-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
+
+/* No Tasks Message */
+.no-tasks {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+}
+
+/* Task Statistics */
+.task-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.task-state p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .add-task-form {
+    flex-direction: column;
+  }
+
+  .task-stats {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
